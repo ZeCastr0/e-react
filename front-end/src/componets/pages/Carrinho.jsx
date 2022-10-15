@@ -1,4 +1,5 @@
 import React from "react";
+import logoProStyle from "../../imgs/Logo ProStyle/Logo-NAV.jpeg";
 
 export default function Carrinho() {
   return (
@@ -10,7 +11,7 @@ export default function Carrinho() {
       >
         <div className="container">
           <img
-            src="assets/Logo ProStyle/Logo-NAV.jpeg"
+            src={logoProStyle}
             alt="Logo da ProStyle"
             className=" bi me-2 d-flex  mb-2 mb-lg-0 text-white text-decoration-none"
             width={100}

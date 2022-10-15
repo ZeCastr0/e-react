@@ -1,4 +1,5 @@
 import React from "react";
+import camisetaSantaCruz from "../../imgs/camisa santacruz.png.png";
 
 export default function Home() {
   return (
@@ -21,7 +22,7 @@ export default function Home() {
                   {/* IMAGEM AQUI*/}
                 </svg>
                 <img
-                  src="./assets/camisa santacruz.png.png"
+                  src={camisetaSantaCruz}
                   alt="Camisa Santacruz Preta"
                   className="Tamanho-da-camisa-no-card"
                 />
