@@ -1,6 +1,6 @@
 import React from "react";
 import logoProStyle from "../../imgs/Logo ProStyle/Logo-NAV.jpeg";
-import logoCadastro from "../../imgs/Logo ProStyle/09";
+import logoCadastro from "../../imgs/Logo ProStyle/09.jpeg";
 
 export default function Cadastro() {
   return (

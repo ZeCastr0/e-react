@@ -304,7 +304,6 @@ export default function Carrinho() {
           </li>
         </ul>
       </footer>
-      {/* JavaScript Bundle with Popper */}
     </div>
   );
 }

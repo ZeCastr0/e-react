@@ -1,22 +1,20 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./components/pages/Home";
-import UserBlog from "./components/pages/UserBlog";
-import Users from "./components/pages/Users";
-import UserPostForm from "./components/pages/UserPostForm";
+import Cadastro from "./components/pages/Cadastro";
+import Carrinho from "./components/pages/Carrinho";
+import Login from "./components/pages/Login";
 
-import "./styles/normalize.css";
-import "./styles/fontawesome.min.css";
-import "./styles/main.css";
+import "./style/style.css";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/users" element={<Users />} />
-        <Route path="/users/:userId" element={<UserBlog />} />
-        <Route path="/users/posts/new" element={<UserPostForm />} />
+        <Route path="/carrinho" element={<Carrinho />} />
+        <Route path="/cadastro" element={<Cadastro />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </BrowserRouter>
   );
