@@ -1,12 +1,19 @@
 import React from "react";
-
 import AppFooter from "../organisms/AppFooter";
 import AppHeader from "../organisms/AppHeader";
+
+import { useNavigate } from "react-router-dom";
+import AppLoading from "../organisms/AppLoading";
 
 import logoCadastro from "../../imgs/Logo ProStyle/09.jpeg";
 
 export default function Cadastro() {
-  return (
+  const navigate = useNavigate();
+  const [isLoading, setIsLoading] = React.useState(true);
+
+  return isLoading ? (
+    <AppLoading />
+  ) : (
     <div>
       {/* Header */}
       <AppHeader />

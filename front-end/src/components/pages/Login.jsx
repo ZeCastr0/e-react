@@ -1,7 +1,15 @@
 import React from "react";
 
+import { useNavigate } from "react-router-dom";
+import AppLoading from "../organisms/AppLoading";
+
 export default function Login() {
-  return (
+  const navigate = useNavigate();
+  const [isLoading, setIsLoading] = React.useState(true);
+
+  return isLoading ? (
+    <AppLoading />
+  ) : (
     <div
       className="modal modal-signin position-static d-block py-5 background-gray"
       tabIndex={-1}
