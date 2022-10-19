@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
+import { Link } from "react-router-dom";
 
 import ImagemStreetwear from "../../imgs/Imagem-streetwear-nacional.png";
 import CarrouselElement from "../../imgs/Carrousel Element.png";
