@@ -1,11 +1,7 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import AppLoading from "../organisms/AppLoading";
+import AppModalLogin from "../organisms/AppModalLogin";
 
 export default function Home() {
-  const navigate = useNavigate();
-  const [isLoading, setIsLoading] = React.useState(false);
-
   /* React.useEffect(() => {
     fetch("https://62c4e487abea8c085a7e022a.mockapi.io/users")
       .then((response) => response.json())
@@ -15,9 +11,9 @@ export default function Home() {
       });
   }, []); CONSUMINDO API */
 
-  return isLoading ? <AppLoading /> : (
+  return (
     <div>
-       <Entrar /> 
+      <AppModalLogin />
     </div>
-    )
+  );
 }
