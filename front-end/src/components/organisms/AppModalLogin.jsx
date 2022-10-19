@@ -54,6 +54,3 @@ export default function AppModalLogin(props) {
       </Modal>
     );
   }
-
-  
-  
