@@ -4,7 +4,7 @@ import AppLoading from "../organisms/AppLoading";
 
 export default function Home() {
   const navigate = useNavigate();
-  const [isLoading, setIsLoading] = React.useState(true);
+  const [isLoading, setIsLoading] = React.useState(false);
 
   /* React.useEffect(() => {
     fetch("https://62c4e487abea8c085a7e022a.mockapi.io/users")
