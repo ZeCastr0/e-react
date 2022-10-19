@@ -15,5 +15,5 @@ export default function Home() {
       });
   }, []); CONSUMINDO API */
 
-  return isLoading ? <AppLoading /> : <div> oi</div>;
+  return isLoading ? <AppLoading /> : <div> <Entrar /> </div>;
 }
