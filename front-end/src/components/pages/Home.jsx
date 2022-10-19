@@ -1,30 +1,19 @@
-// juntar tudo aqui!!!
-
 import React from "react";
-import AppFooter from "../organisms/AppFooter";
-import AppHeader from "../organisms/AppHeader";
-import AppCards from "../organisms/AppCards";
-import AppCarrosel from "../organisms/AppCarrosel";
-
 import { useNavigate } from "react-router-dom";
+import AppLoading from "../organisms/AppLoading";
 
 export default function Home() {
   const navigate = useNavigate();
+  const [isLoading, setIsLoading] = React.useState(true);
 
-  return (
-    <div>
-      <div>
-        {/* Header */}
-        <AppHeader />
-        {/*Carrosel */}
-        <div>
-          <AppCarrosel />
-          {/* PRODUTOS*/}
-          <AppCards />
-        </div>
-        {/* FOOTER  */}
-        <AppFooter />
-      </div>
-    </div>
-  );
+  /* React.useEffect(() => {
+    fetch("https://62c4e487abea8c085a7e022a.mockapi.io/users")
+      .then((response) => response.json())
+      .then((data) => {
+        setUsers(data);
+        setIsLoading(false);
+      });
+  }, []); CONSUMINDO API */
+
+  return isLoading ? <AppLoading /> : <div> oi</div>;
 }

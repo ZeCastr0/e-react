@@ -1,10 +1,8 @@
-//Novo header
-//add logo
-//
-
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function AppHeader() {
-  return <div>AppHeader</div>;
+import logo from "../../images/logo.svg";
+
+export default function AppHeader(props) {
+  return <div></div>;
 }
