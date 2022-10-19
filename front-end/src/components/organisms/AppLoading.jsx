@@ -3,7 +3,7 @@ import React from "react";
 import Box from "@mui/material/Box";
 import LinearProgress from "@mui/material/LinearProgress";
 
-export default function LinearDeterminate() {
+export default function AppLoading() {
   const [progress, setProgress] = React.useState(0);
 
   React.useEffect(() => {
