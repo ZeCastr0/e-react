@@ -6,6 +6,7 @@ import Carrinho from "./components/pages/Carrinho";
 import Login from "./components/pages/Login";
 
 import "./style/style.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
