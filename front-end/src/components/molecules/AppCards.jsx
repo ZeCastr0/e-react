@@ -13,6 +13,7 @@ export default function BasicExample() {
           bulk of the card's content.
         </Card.Text>
         <Button variant="primary">Go somewhere</Button>
+        <AddInCart />
       </Card.Body>
     </Card>
   );
