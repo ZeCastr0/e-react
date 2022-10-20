@@ -6,6 +6,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
+import Logo from "../../imgs/Logo ProStyle/Logo-NAV.jpeg";
 
 export default function OffcanvasExample() {
   return (
@@ -16,10 +17,12 @@ export default function OffcanvasExample() {
           bg="dark"
           variant="dark"
           expand={expand}
-          className="mb-3"
+          className="mb-3 background-black"
         >
           <Container>
-            <Navbar.Brand href="#">Navbar Offcanvas</Navbar.Brand>
+            <Navbar.Brand href="#">
+              <img src={Logo} alt="Logo ProStyle" className="logo-nav" />
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
@@ -32,11 +35,14 @@ export default function OffcanvasExample() {
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
-                <Nav className="justify-content-end flex-grow-1 pe-3">
+                <Nav className="justify-content flex-grow-1 pe-3">
                   <Nav.Link href="#action1">Home</Nav.Link>
-                  <Nav.Link href="#action2">Link</Nav.Link>
+                  <Nav.Link href="#action2">Camisas</Nav.Link>
+                  <Nav.Link href="#action2">Camisetas Longas</Nav.Link>
+                  <Nav.Link href="#action2">Regatas</Nav.Link>
+                  <Nav.Link href="#action2">Suporte</Nav.Link>
                   <NavDropdown
-                    title="Dropdown"
+                    title="Aproveite"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
                     <NavDropdown.Item href="#action3">Action</NavDropdown.Item>

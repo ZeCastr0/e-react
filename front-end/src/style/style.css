@@ -127,3 +127,15 @@
 .float-right {
     float: right;
 }
+
+.float-left {
+    float: left;
+}
+
+.logo-nav {
+    height:4rem;
+    width: 10rem;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius:30px ;
+    margin-right: 5rem;
+}
