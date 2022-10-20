@@ -11,8 +11,14 @@ export default function OffcanvasExample() {
   return (
     <>
       {["lg"].map((expand) => (
-        <Navbar key={expand} bg="light" expand={expand} className="mb-3">
-          <Container fluid>
+        <Navbar
+          key={expand}
+          bg="dark"
+          variant="dark"
+          expand={expand}
+          className="mb-3"
+        >
+          <Container>
             <Navbar.Brand href="#">Navbar Offcanvas</Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
@@ -44,13 +50,6 @@ export default function OffcanvasExample() {
                   </NavDropdown>
                 </Nav>
                 <Form className="d-flex">
-                  <Form.Control
-                    type="search"
-                    placeholder="Search"
-                    className="me-2"
-                    aria-label="Search"
-                  />
-                  <Button variant="outline-success">Search</Button>
                   <AppModalLogin />
                 </Form>
               </Offcanvas.Body>
