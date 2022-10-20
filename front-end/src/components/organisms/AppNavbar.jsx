@@ -31,7 +31,7 @@ export default function OffcanvasExample() {
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  Offcanvas
+                  
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
@@ -42,16 +42,16 @@ export default function OffcanvasExample() {
                   <Nav.Link href="#action2">Regatas</Nav.Link>
                   <Nav.Link href="#action2">Suporte</Nav.Link>
                   <NavDropdown
-                    title="Aproveite"
+                    title="Seu estilo é ProStyle!"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
                     <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
                     <NavDropdown.Item href="#action4">
-                      Another action
+                      Novidades
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item href="#action5">
-                      Something else here
+                      Frete Gratis!
                     </NavDropdown.Item>
                   </NavDropdown>
                 </Nav>
