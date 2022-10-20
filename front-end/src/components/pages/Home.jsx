@@ -1,5 +1,5 @@
 import React from "react";
-import AppNavbar from "../molecules/AppNavbar";
+import AppNavbar from "../organisms/AppNavbar";
 
 export default function Home() {
   /* React.useEffect(() => {
