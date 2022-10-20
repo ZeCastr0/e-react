@@ -94,3 +94,36 @@
     align-items: center;
     justify-content: center;
 }
+
+.enter-button {
+    text-align: center;
+    background-color: black;
+    border-radius: 5px;
+    height: 2rem;
+    width: 5.5rem;
+    text-decoration: none;
+    color: white;
+}
+
+.enter-button:hover { 
+    box-shadow: 5px 5px 15px 5px #00F5FF, 5px 1px 15px 3px #00B1FF, 5px 1px 15px 3px #00B1FF;
+}
+
+.align-items-center {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.border-radius {
+    border-radius: 10px;
+}
+
+.X{
+    float: right;
+    margin-left: 4rem;
+}
+
+.float-right {
+    float: right;
+}

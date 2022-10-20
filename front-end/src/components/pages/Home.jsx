@@ -1,5 +1,5 @@
 import React from "react";
-import AppModalLogin from "../organisms/AppModalLogin";
+import AppNavbar from "../molecules/AppNavbar";
 
 export default function Home() {
   /* React.useEffect(() => {
@@ -13,7 +13,7 @@ export default function Home() {
 
   return (
     <div>
-      <AppModalLogin />
+      <AppNavbar />
     </div>
   );
 }
