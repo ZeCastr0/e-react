@@ -23,22 +23,21 @@ export default function MediaCard() {
             component="img"
             height="250"
             image={CamisetaSantaCruz}
-            alt="green iguana"
+            alt="Camisa Santa Cruz Preta"
             className="Tamanho-da-camisa-no-card"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Lizard
+            Camisa Santa Cruz Preta
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
+              Apenas R$150,00 ou 3xR$50,00
             </Typography>
           </CardContent>
           <CardActions className="justify-content-end">
             <div>
               <Button size="small" className="justify-content-center">
-                Share
+              Detalhes
               </Button>
             </div>
             <div className="float-right add-cart">
@@ -54,22 +53,21 @@ export default function MediaCard() {
             component="img"
             height="250"
             image={CamisaThreasher}
-            alt="green iguana"
+            alt="Manga Longa thrasher"
             className="Tamanho-da-camisa-no-card"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Lizard
+            Manga Longa thrasher
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
+            Apenas R$150,00 ou 3xR$50,00
             </Typography>
           </CardContent>
           <CardActions className="justify-content-end">
             <div>
               <Button size="small" className="justify-content-center">
-                Share
+              Detalhes
               </Button>
             </div>
             <div className="float-right add-cart">
@@ -85,22 +83,21 @@ export default function MediaCard() {
             component="img"
             height="250"
             image={CamisaSupremeBranca}
-            alt="green iguana"
+            alt="Camisa Supreme Branca"
             className="Tamanho-da-camisa-no-card"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Lizard
+            Camisa Supreme Branca
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
+            Apenas R$150,00 ou 3xR$50,00
             </Typography>
           </CardContent>
           <CardActions className="justify-content-end">
             <div>
               <Button size="small" className="justify-content-center">
-                Share
+              Detalhes
               </Button>
             </div>
             <div className="float-right add-cart">
@@ -116,22 +113,21 @@ export default function MediaCard() {
             component="img"
             height="250"
             image={CamisaVisllAazul}
-            alt="green iguana"
+            alt="Camisa Vissla Azul"
             className="Tamanho-da-camisa-no-card"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Lizard
+            Camisa Vissla Azul
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
+            Apenas R$150,00 ou 3xR$50,00
             </Typography>
           </CardContent>
           <CardActions className="justify-content-end">
             <div>
               <Button size="small" className="justify-content-center">
-                Share
+              Detalhes
               </Button>
             </div>
             <div className="float-right add-cart">
@@ -147,22 +143,21 @@ export default function MediaCard() {
             component="img"
             height="250"
             image={mangalongaillusionpreta}
-            alt="green iguana"
+            alt="Manga Longa Illusion Preta"
             className="Tamanho-da-camisa-no-card"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Lizard
+            Manga Longa Illusion Preta
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
+            Apenas R$150,00 ou 3xR$50,00
             </Typography>
           </CardContent>
           <CardActions className="justify-content-end">
             <div>
               <Button size="small" className="justify-content-center">
-                Share
+              Detalhes
               </Button>
             </div>
             <div className="float-right add-cart">
@@ -178,22 +173,21 @@ export default function MediaCard() {
             component="img"
             height="250"
             image={mangalongacinza}
-            alt="green iguana"
+            alt="Manga Longa Nike Cinza"
             className="Tamanho-da-camisa-no-card"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Lizard
+            Manga Longa Nike Cinza
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
+            Apenas R$150,00 ou 3xR$50,00
             </Typography>
           </CardContent>
           <CardActions className="justify-content-end">
             <div>
               <Button size="small" className="justify-content-center">
-                Share
+              Detalhes
               </Button>
             </div>
             <div className="float-right add-cart">
@@ -209,22 +203,21 @@ export default function MediaCard() {
             component="img"
             height="250"
             image={CamisetaSantaCruz}
-            alt="green iguana"
+            alt="Camisa Santa Cruz Preta"
             className="Tamanho-da-camisa-no-card"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Lizard
+            Camisa Santa Cruz Preta
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
+            Apenas R$150,00 ou 3xR$50,00
             </Typography>
           </CardContent>
           <CardActions className="justify-content-end">
             <div>
               <Button size="small" className="justify-content-center">
-                Share
+              Detalhes
               </Button>
             </div>
             <div className="float-right add-cart">
@@ -240,22 +233,21 @@ export default function MediaCard() {
             component="img"
             height="250"
             image={CamisaThreasher}
-            alt="green iguana"
+            alt="Manga Longa thrasher"
             className="Tamanho-da-camisa-no-card"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Lizard
+            Manga Longa thrasher
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
+            Apenas R$150,00 ou 3xR$50,00
             </Typography>
           </CardContent>
           <CardActions className="justify-content-end">
             <div>
               <Button size="small" className="justify-content-center">
-                Share
+                Detalhes 
               </Button>
             </div>
             <div className="float-right add-cart">
@@ -271,22 +263,21 @@ export default function MediaCard() {
             component="img"
             height="250"
             image={CamisaSupremeBranca}
-            alt="green iguana"
+            alt="Camisa Supreme Branca"
             className="Tamanho-da-camisa-no-card"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Lizard
+            Camisa Supreme Branca
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
+            Apenas R$150,00 ou 3xR$50,00
             </Typography>
           </CardContent>
           <CardActions className="justify-content-end">
             <div>
               <Button size="small" className="justify-content-center">
-                Share
+              Detalhes
               </Button>
             </div>
             <div className="float-right add-cart">
