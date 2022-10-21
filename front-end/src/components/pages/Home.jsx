@@ -1,7 +1,6 @@
 import React from "react";
 import AppNavbar from "../organisms/AppNavbar";
 import AppCards from "../organisms/AppCards";
-import AppFooter from "../organisms/AppFooter";
 
 export default function Home() {
   /* React.useEffect(() => {
@@ -21,10 +20,6 @@ export default function Home() {
 
       <div>
         <AppCards />
-      </div>
-
-      <div>
-        <AppFooter />
       </div>
     </div>
   );

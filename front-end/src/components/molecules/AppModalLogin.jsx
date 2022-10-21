@@ -2,6 +2,7 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
+import CloseButton from "../atoms/CloseButton";
 
 const style = {
   position: "absolute",
@@ -39,7 +40,7 @@ export default function BasicModal() {
         <Box sx={style} className="border-radius">
           <div className="X">
             <Button variant="outline-dark" onClick={handleClose}>
-              X
+              <CloseButton />
             </Button>
           </div>
           <h1
