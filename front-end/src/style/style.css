@@ -81,8 +81,8 @@
 }
 
 .Tamanho-da-camisa-no-card{
-    width: 200px;
-    height: 200px;
+    width:50rem;
+    height:19rem;
 }
 
 
@@ -138,4 +138,28 @@
     border-bottom-left-radius: 15px;
     border-top-right-radius:30px ;
     margin-right: 5rem;
+}
+
+.add-cart {
+    border: #00B1FF solid 1px;
+    border-radius: 50px;
+    
+}
+.add-cart:hover {
+    background-color: #00B1FF;
+}
+
+.center-item{
+    margin-left: 50%;
+	transform: translateX(-50%); 
+}
+
+.card {
+    margin: 1rem;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
 }

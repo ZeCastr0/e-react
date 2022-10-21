@@ -1,5 +1,4 @@
 import AppModalLogin from "../molecules/AppModalLogin";
-import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
@@ -30,9 +29,9 @@ export default function OffcanvasExample() {
               placement="end"
             >
               <Offcanvas.Header closeButton>
-                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  
-                </Offcanvas.Title>
+                <Offcanvas.Title
+                  id={`offcanvasNavbarLabel-expand-${expand}`}
+                ></Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content flex-grow-1 pe-3">
