@@ -20,7 +20,7 @@ export default function OffcanvasExample() {
           className="mb-3 background-black"
         >
           <Container>
-            <Navbar.Brand href="#">
+            <Navbar.Brand href="/">
               <img src={Logo} alt="Logo ProStyle" className="logo-nav" />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
