@@ -6,6 +6,7 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Logo from "../../imgs/Logo ProStyle/Logo-NAV.jpeg";
+import { Link } from "react-router-dom";
 
 export default function OffcanvasExample() {
   return (
