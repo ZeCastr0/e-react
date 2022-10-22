@@ -1,6 +1,6 @@
 import React from "react";
 import AppNavbar from "../organisms/AppNavbar";
-import AppTextProduct from "../molecules/AppModalLogin";
+import AppTextProduct from "../molecules/AppTextProduct";
 
 export default function Product() {
   /* React.useEffect(() => {
@@ -17,8 +17,19 @@ export default function Product() {
       <div>
         <AppNavbar />
       </div>
-      <div>
-        <AppTextProduct />
+
+      <div className="justify-content">
+        <div>
+          <img
+            src={CamisetaSantaCruz}
+            alt="Camiseta Santa Cruz"
+            className="card"
+          />
+        </div>
+
+        <div className="float-right">
+          <AppTextProduct />
+        </div>
       </div>
     </div>
   );
