@@ -169,4 +169,10 @@
 .card-text-procuct {
     width: 40%;
     height: 80%;
+    float: right;
+}
+
+.teste {
+display: flex;
+flex-wrap: wrap;
 }
