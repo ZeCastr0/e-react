@@ -165,3 +165,8 @@
     width: 80%;
     margin: 0 auto;
 }
+
+.card-text-procuct {
+    width: 50rem;
+    height: 50rem;
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import AppNavbar from "../organisms/AppNavbar";
+import AppTextProduct from "../molecules/AppModalLogin";
 
 export default function Product() {
   /* React.useEffect(() => {
@@ -15,6 +16,9 @@ export default function Product() {
     <div>
       <div>
         <AppNavbar />
+      </div>
+      <div>
+        <AppTextProduct />
       </div>
     </div>
   );

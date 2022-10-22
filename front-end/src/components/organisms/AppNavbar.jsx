@@ -36,11 +36,11 @@ export default function OffcanvasExample() {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content flex-grow-1 pe-3">
-                  <Nav.Link href="#action1">Home</Nav.Link>
+                  <Nav.Link href="/">Home</Nav.Link>
                   <Nav.Link href="#action2">Camisas</Nav.Link>
-                  <Nav.Link href="#action2">Camisetas Longas</Nav.Link>
-                  <Nav.Link href="#action2">Regatas</Nav.Link>
-                  <Nav.Link href="#action2">Suporte</Nav.Link>
+                  <Nav.Link href="#action3">Camisetas Longas</Nav.Link>
+                  <Nav.Link href="#action4">Regatas</Nav.Link>
+                  <Nav.Link href="#action5">Suporte</Nav.Link>
                   <NavDropdown
                     title="Seu estilo é ProStyle!"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
