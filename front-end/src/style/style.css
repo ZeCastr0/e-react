@@ -156,6 +156,8 @@
 
 .card {
     margin: 1rem;
+    width:20rem;
+    height:10rem ;
 }
 .cards {
     display: flex;
