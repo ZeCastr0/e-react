@@ -19,7 +19,7 @@ export default function OffcanvasExample() {
           className="mb-3 background-black"
         >
           <Container>
-            <Navbar.Brand href="#">
+            <Navbar.Brand href="/">
               <img src={Logo} alt="Logo ProStyle" className="logo-nav" />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
@@ -35,22 +35,21 @@ export default function OffcanvasExample() {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content flex-grow-1 pe-3">
-                  <Nav.Link href="#action1">Home</Nav.Link>
+                  <Nav.Link href="/">Home</Nav.Link>
                   <Nav.Link href="#action2">Camisas</Nav.Link>
-                  <Nav.Link href="#action2">Camisetas Longas</Nav.Link>
-                  <Nav.Link href="#action2">Regatas</Nav.Link>
-                  <Nav.Link href="#action2">Suporte</Nav.Link>
-                  <NavDropdown class=""
+                  <Nav.Link href="#action3">Camisetas Longas</Nav.Link>
+                  <Nav.Link href="#action4">Regatas</Nav.Link>
+                  <Nav.Link href="#action5">Suporte</Nav.Link>
+                  <NavDropdown
+                    class=""
                     title="Roupas Masculinas"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
                     <NavDropdown.Item href="#action3">Camisas</NavDropdown.Item>
                     <NavDropdown.Item href="#action4">
                       Camisetas Longas
-                      </NavDropdown.Item>
-                    <NavDropdown.Item href="#action5">
-                      Regatas
                     </NavDropdown.Item>
+                    <NavDropdown.Item href="#action5">Regatas</NavDropdown.Item>
                   </NavDropdown>
                 </Nav>
                 <Form className="d-flex">

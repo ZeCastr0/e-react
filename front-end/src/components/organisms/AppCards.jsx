@@ -13,6 +13,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import AddInCart from "../../imgs/cart-plus.svg";
+import { Link } from "react-router-dom";
 
 export default function MediaCard() {
   return (
@@ -28,7 +29,7 @@ export default function MediaCard() {
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-            Camisa Santa Cruz Preta
+              Camisa Santa Cruz Preta
             </Typography>
             <Typography variant="body2" color="text.secondary">
               Apenas R$150,00 ou 3xR$50,00
@@ -37,7 +38,7 @@ export default function MediaCard() {
           <CardActions className="justify-content-end">
             <div>
               <Button size="small" className="justify-content-center">
-              Detalhes
+                <Link to="/product/1"> Detalhes </Link>
               </Button>
             </div>
             <div className="float-right add-cart">
@@ -58,16 +59,16 @@ export default function MediaCard() {
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-            Manga Longa thrasher
+              Manga Longa thrasher
             </Typography>
             <Typography variant="body2" color="text.secondary">
-            Apenas R$150,00 ou 3xR$50,00
+              Apenas R$150,00 ou 3xR$50,00
             </Typography>
           </CardContent>
           <CardActions className="justify-content-end">
             <div>
               <Button size="small" className="justify-content-center">
-              Detalhes
+                Detalhes
               </Button>
             </div>
             <div className="float-right add-cart">
@@ -88,16 +89,16 @@ export default function MediaCard() {
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-            Camisa Supreme Branca
+              Camisa Supreme Branca
             </Typography>
             <Typography variant="body2" color="text.secondary">
-            Apenas R$150,00 ou 3xR$50,00
+              Apenas R$150,00 ou 3xR$50,00
             </Typography>
           </CardContent>
           <CardActions className="justify-content-end">
             <div>
               <Button size="small" className="justify-content-center">
-              Detalhes
+                Detalhes
               </Button>
             </div>
             <div className="float-right add-cart">
@@ -118,16 +119,16 @@ export default function MediaCard() {
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-            Camisa Vissla Azul
+              Camisa Vissla Azul
             </Typography>
             <Typography variant="body2" color="text.secondary">
-            Apenas R$150,00 ou 3xR$50,00
+              Apenas R$150,00 ou 3xR$50,00
             </Typography>
           </CardContent>
           <CardActions className="justify-content-end">
             <div>
               <Button size="small" className="justify-content-center">
-              Detalhes
+                Detalhes
               </Button>
             </div>
             <div className="float-right add-cart">
@@ -148,16 +149,16 @@ export default function MediaCard() {
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-            Manga Longa Illusion Preta
+              Manga Longa Illusion Preta
             </Typography>
             <Typography variant="body2" color="text.secondary">
-            Apenas R$150,00 ou 3xR$50,00
+              Apenas R$150,00 ou 3xR$50,00
             </Typography>
           </CardContent>
           <CardActions className="justify-content-end">
             <div>
               <Button size="small" className="justify-content-center">
-              Detalhes
+                Detalhes
               </Button>
             </div>
             <div className="float-right add-cart">
@@ -178,16 +179,16 @@ export default function MediaCard() {
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-            Manga Longa Nike Cinza
+              Manga Longa Nike Cinza
             </Typography>
             <Typography variant="body2" color="text.secondary">
-            Apenas R$150,00 ou 3xR$50,00
+              Apenas R$150,00 ou 3xR$50,00
             </Typography>
           </CardContent>
           <CardActions className="justify-content-end">
             <div>
               <Button size="small" className="justify-content-center">
-              Detalhes
+                Detalhes
               </Button>
             </div>
             <div className="float-right add-cart">
@@ -208,16 +209,16 @@ export default function MediaCard() {
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-            Camisa Santa Cruz Preta
+              Camisa Santa Cruz Preta
             </Typography>
             <Typography variant="body2" color="text.secondary">
-            Apenas R$150,00 ou 3xR$50,00
+              Apenas R$150,00 ou 3xR$50,00
             </Typography>
           </CardContent>
           <CardActions className="justify-content-end">
             <div>
               <Button size="small" className="justify-content-center">
-              Detalhes
+                Detalhes
               </Button>
             </div>
             <div className="float-right add-cart">
@@ -238,16 +239,16 @@ export default function MediaCard() {
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-            Manga Longa thrasher
+              Manga Longa thrasher
             </Typography>
             <Typography variant="body2" color="text.secondary">
-            Apenas R$150,00 ou 3xR$50,00
+              Apenas R$150,00 ou 3xR$50,00
             </Typography>
           </CardContent>
           <CardActions className="justify-content-end">
             <div>
               <Button size="small" className="justify-content-center">
-                Detalhes 
+                Detalhes
               </Button>
             </div>
             <div className="float-right add-cart">
@@ -268,16 +269,16 @@ export default function MediaCard() {
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-            Camisa Supreme Branca
+              Camisa Supreme Branca
             </Typography>
             <Typography variant="body2" color="text.secondary">
-            Apenas R$150,00 ou 3xR$50,00
+              Apenas R$150,00 ou 3xR$50,00
             </Typography>
           </CardContent>
           <CardActions className="justify-content-end">
             <div>
               <Button size="small" className="justify-content-center">
-              Detalhes
+                Detalhes
               </Button>
             </div>
             <div className="float-right add-cart">
