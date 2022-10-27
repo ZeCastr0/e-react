@@ -16,6 +16,13 @@ const style = {
   p: 4,
 };
 
+/* React.useEffect(() => {
+    fetch("")
+      .then((response) => response.json())
+      .then((data) => {   
+      });
+  }, []); CONSUMINDO API */
+
 export default function BasicModal() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
