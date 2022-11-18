@@ -6,6 +6,7 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Logo from "../../imgs/Logo ProStyle/Logo-NAV.jpeg";
+import ButtonSignUp from "../../components/atoms/AppCadastese";
 
 export default function OffcanvasExample() {
   return (
@@ -36,10 +37,6 @@ export default function OffcanvasExample() {
               <Offcanvas.Body>
                 <Nav className="justify-content flex-grow-1 pe-3">
                   <Nav.Link href="/">Home</Nav.Link>
-                  <Nav.Link href="#action2">Camisas</Nav.Link>
-                  <Nav.Link href="#action3">Camisetas Longas</Nav.Link>
-                  <Nav.Link href="#action4">Regatas</Nav.Link>
-                  <Nav.Link href="#action5">Suporte</Nav.Link>
                   <NavDropdown
                     class=""
                     title="Roupas Masculinas"
@@ -51,9 +48,21 @@ export default function OffcanvasExample() {
                     </NavDropdown.Item>
                     <NavDropdown.Item href="#action5">Regatas</NavDropdown.Item>
                   </NavDropdown>
+                  <NavDropdown
+                    class=""
+                    title="Roupas Femininas"
+                    id={`offcanvasNavbarDropdown-expand-${expand}`}
+                  >
+                    <NavDropdown.Item href="#action3">Camisas</NavDropdown.Item>
+                    <NavDropdown.Item href="#action4">
+                      Camisetas Longas
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#action5">Regatas</NavDropdown.Item>
+                  </NavDropdown>
                 </Nav>
                 <Form className="d-flex">
                   <AppModalLogin />
+                  <ButtonSignUp />
                 </Form>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
