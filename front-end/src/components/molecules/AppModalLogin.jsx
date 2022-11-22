@@ -18,6 +18,7 @@ const style = {
   p: 4,
 };
 
+// <<<<<<< HEAD
 // export default function initialState() {
 //   return { user: "", password: "" };
 // }
@@ -32,6 +33,14 @@ const style = {
 //     });
 //   }
 // };
+// =======
+/* React.useEffect(() => {
+    fetch("")
+      .then((response) => response.json())
+      .then((data) => {   
+      });
+  }, []); CONSUMINDO API */
+// >>>>>>> 6300a91027998c64462ab517de7d645a25f9bd80
 
 export default function BasicModal() {
   const [open, setOpen] = React.useState(false);
