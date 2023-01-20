@@ -1,18 +1,20 @@
 //arquivo responsavel por impotar as bibliotecas baixadas com o NPM e declarar a rota principal
 
-const express = require('express')
-const app = express() 
-const cors = require('cors') // Boa pratica sempre baixar 
+const express = require("express");
+const app = express();
+const cors = require("cors");
 
-require('dotenv-safe').config(); 
+app.use(cors());
+app.use(express.json());
+//app.use("/users", userRoutes);
 
-const db = require('./config/database')
-const userRoutes = require('./routes/userRoutes') 
+require("dotenv-safe").config();
 
-db.connect() 
+const db = require("./config/database");
+const userRoutes = require("./routes/userRoutes");
 
-app.use(cors())
-app.use(express.json())
-app.use("/users", userRoutes) // Rota principal 
+app.listen(3000, () => {
+  console.log("Server running on port 3000");
+});
 
-module.exports = app // deixando o arquivo disponivel para ser utilizado em outros
+module.exports = app;

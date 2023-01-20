@@ -5,15 +5,19 @@ import Product from "./components/pages/Product";
 
 import "./style/style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import DatabaseConnection from "./db";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/product/:id" element={<Product />} />
-      </Routes>
-    </BrowserRouter>
+    <div>
+      <DatabaseConnection />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/product/:id" element={<Product />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 

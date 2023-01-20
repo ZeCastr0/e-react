@@ -1,21 +1,17 @@
-// Arquivo responsavel por ligar/configurar ao DB 
+const { Client } = require("pg");
+const connectionString =
+  "postgres://rltkvpkd:4bJqfKmrG5mcBsU-jm4iaPRw_7-8zBpA@babar.db.elephantsql.com/rltkvpkd";
 
-const mongoose = require('mongoose')
+const client = new Client({
+  connectionString: connectionString,
+});
 
-const MONGODB_URI = process.env.MONGODB_URI // endereço do DB declarado no env
+client.connect((err) => {
+  if (err) {
+    console.error("connection error", err.stack);
+  } else {
+    console.log("connected");
+  }
+});
 
-const connect = async () => {
-    try {
-        await mongoose.connect(MONGODB_URI, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true
-        })
-        console.log("Banco conectado") // sucesso 
-    } catch (error) {
-        console.error("Erro: ", error.message) // mostra o erro no terminal 
-    }
-}
-
-module.exports = {
-    connect
-} // exporta 
+module.exports = client;
