@@ -1,8 +1,10 @@
 import * as React from "react";
+// import React { useState } from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import CloseButton from "../atoms/CloseButton";
+import { useState } from "react";
 
 const style = {
   position: "absolute",
@@ -16,12 +18,29 @@ const style = {
   p: 4,
 };
 
+// <<<<<<< HEAD
+// export default function initialState() {
+//   return { user: "", password: "" };
+// }
+// const UserLogin = () => {
+//   const [values, setValues] = useState(initialState);
+
+//   function onChange(event) {
+//     const { value, name } = event.target;
+//     setValues({
+//       ...values,
+//       [name]: value,
+//     });
+//   }
+// };
+// =======
 /* React.useEffect(() => {
     fetch("")
       .then((response) => response.json())
       .then((data) => {   
       });
   }, []); CONSUMINDO API */
+// >>>>>>> 6300a91027998c64462ab517de7d645a25f9bd80
 
 export default function BasicModal() {
   const [open, setOpen] = React.useState(false);
@@ -30,7 +49,7 @@ export default function BasicModal() {
 
   return (
     <div>
-      <div className="enter-button">
+      <div className="enter-button border-radius">
         <Button
           onClick={handleOpen}
           className="text-color-titles"
@@ -66,6 +85,8 @@ export default function BasicModal() {
                   className="form-control rounded-3"
                   id="floatingInput"
                   placeholder="name@example.com"
+                  // onChange={onChange}
+                  // value={values.user}
                 />
                 <label htmlFor="floatingInput">Email</label>
               </div>
@@ -75,6 +96,8 @@ export default function BasicModal() {
                   className="form-control rounded-3"
                   id="floatingPassword"
                   placeholder="Password"
+                  // onChange={onChange}
+                  // value={values.password}
                 />
                 <label htmlFor="floatingPassword">Senha</label>
               </div>

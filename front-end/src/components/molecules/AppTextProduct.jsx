@@ -6,16 +6,22 @@ export default function AppTextProduct() {
     <div>
       <Card className="card-text-procuct">
         <Card.Body>
-          <Card.Title>Card Title</Card.Title>
-          <Card.Subtitle className="mb-2 text-muted">
-            Card Subtitle
-          </Card.Subtitle>
+          <Card.Title>Camisa Santa Cruz Preta</Card.Title>
+          <div>
+            <div>
+              Tamanhos: <input type="number"></input>
+            </div>
+            <div>Valor: R$150,00</div>
+          </div>
+
           <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam
+            maecenas sed enim ut sem viverra. Ultricies tristique nulla aliquet
+            enim tortor at auctor. Mauris nunc congue nisi vitae suscipit tellus
+            mauris a. Turpis massa tincidunt dui ut ornare lectus sit. Pretium
+            fusce id velit ut tortor pretium viverra suspendisse.
           </Card.Text>
-          <Card.Link href="#">Card Link</Card.Link>
-          <Card.Link href="#">Another Link</Card.Link>
         </Card.Body>
       </Card>
     </div>

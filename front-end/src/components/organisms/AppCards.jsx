@@ -68,7 +68,7 @@ export default function MediaCard() {
           <CardActions className="justify-content-end">
             <div>
               <Button size="small" className="justify-content-center">
-                Detalhes
+                <Link to="/product/2"> Detalhes </Link>
               </Button>
             </div>
             <div className="float-right add-cart">
