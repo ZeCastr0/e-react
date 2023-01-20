@@ -12,6 +12,7 @@ router.get("/user/:id", controller.getById); // rota para o controller para list
 router.post("/create", controller.createUser); // rota para o controller para criar usuraios
 router.patch("/update/:id", controller.updateUserById); // rota para o controller para atualizar usuraios pelo id
 router.delete("/delete/:id", controller.deleteUserById); // rota para o controller para deletar usuraios pelo ID
+
 router.post("/login", authController.login); // rota para o controller para fazer login
 
 module.exports = router; // deixa o arquivo despinivel para ser usado
