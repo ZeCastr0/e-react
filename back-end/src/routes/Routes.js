@@ -3,7 +3,7 @@
 const express = require("express");
 const router = express.Router();
 
-const controller = require("../controllers/execProcs"); // indica onde esta o arquivo de controllers
+const controllerProcs = require("../controllers/ControllerProcs"); // indica onde esta o arquivo de controllers
 
 //const authController = require("../controllers/authController"); // indica onde esta o arquivo de controllers
 //
@@ -16,9 +16,10 @@ const controller = require("../controllers/execProcs"); // indica onde esta o ar
 //
 //router.post("/login", authController.login); // rota para o controller para fazer login
 
-router.post("/create-produtos", (req, res) => {
-  controller.createTable();
-  res.send("Tabela criada com sucesso");
-});
-
 module.exports = router; // deixa o arquivo despinivel para ser usado
+
+//router.post("/login",
+//router.post("/cadastro",
+//router.post("/addcarrinho",
+//router.get("/selectcarrinho",
+//router.post("/addproduto",
