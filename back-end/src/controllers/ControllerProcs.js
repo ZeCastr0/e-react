@@ -73,10 +73,19 @@ const selectCarrinho = (req, res) => {
     if (err) {
       res.status(400).send(err);
     } else {
-      res.status(200).send(result.rows);
+      const carrinho = result.rows.map(item => {
+        return {
+          id: item.car_codigo_in,
+          nome: item.car_nome_vc,
+          descricao: item.car_descricao_vc,
+          caminhoImg: item.car_caminhoimg_vc,
+          valor: item.car_valor_mn
+        }
+      });
+      res.status(200).json({ carrinho });
     }
   });
-};
+};;
 
 //router.post("/addproduto",
 const addProduto = (req, res) => {
