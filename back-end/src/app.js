@@ -9,7 +9,7 @@ require("dotenv-safe").config();
 
 //const { createTables } = require("./config/table");
 const { createProcedures } = require("./config/procedures");
-//createTables();
+//createTables(); Ja foi criada
 createProcedures();
 
 const userRoutes = require("./routes/Routes"); // importa as rotas do arquivo UserRoutes
