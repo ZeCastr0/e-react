@@ -32,7 +32,7 @@ const cadastro = (req, res) => {
   const nome = req.body.nome;
 
   pgClient.query(
-    "CALL usp_CadastroUsuario($1, $2, $3)",
+    "CALL usp_CadastroLoginUsuario($1, $2, $3)",
     [email, senha, nome],
     (err, result) => {
       if (err) {

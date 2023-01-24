@@ -1,6 +1,13 @@
-const { Client } = require("pg");
-const connectionString = process.env.DATABASE_URL;
+const { Pool } = require("pg");
 
-const pgClient = new Client({ connectionString });
+const createNewClient = () => {
+  const connectionString = process.env.DATABASE_URL;
+  return new Pool({
+    connectionString: connectionString,
+    ssl: true,
+  });
+};
+
+const pgClient = createNewClient();
 
 module.exports = pgClient;
