@@ -21,7 +21,6 @@ AS $$
 		        v__CALC_Nome_VC			    VARCHAR(254) 	= p__PAR_Nome_VC;
 BEGIN	
 
-	-- SQLINES LICENSE FOR EVALUATION USE ONLY
 	INSERT INTO Usuarios_T	(usu_Email_VC, usu_Nome_VC, usu_Senha_VC)
 					VALUES	(v__CALC_Email_VC, v__CALC_Nome_VC, v__CALC_Senha_VC);
 END;

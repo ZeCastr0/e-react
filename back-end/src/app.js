@@ -12,6 +12,10 @@ const { createProcedures } = require("./config/procedures");
 createTables();
 createProcedures();
 
+const userRoutes = require("./routes/Routes"); // importa as rotas do arquivo UserRoutes
+
+app.use("/user", userRoutes); // utiliza as rotas importadas com o prefixo '/user'
+
 app.listen(3000, () => {
   console.log("Server running on port 3000");
 });

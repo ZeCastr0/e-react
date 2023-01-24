@@ -1,45 +1,42 @@
 const express = require("express");
 const router = express.Router();
-const {
-  createProcedureLoginUsuario,
-  createProcedureCadastroUsuario,
-  createProcedureAddCarrinho,
-  createProcedureSelectCarrinho,
-  createProcedureAddProduto,
-} = require("../procs/procedure");
+const pgClient = require("../config/database");
+const { createProcedures } = require("../config/procedures");
 
-//router.post("/login",
 const login = (req, res) => {
   const email = req.body.email;
   const senha = req.body.senha;
 
-  pgClient.query(createProcedureLoginUsuario, [email, senha], (err, result) => {
-    if (err) {
-      res.status(400).send(err);
-    } else {
-      if (result.rows[0].status) {
-        // login válido
-        res.status(200).send("Login realizado com sucesso!");
+  pgClient.query(
+    "CALL usp_SelectLoginUsuario($1, $2)",
+    [email, senha],
+    (err, result) => {
+      if (err) {
+        res.status(400).send(err);
       } else {
-        // login inválido
-        res.status(401).send("E-mail ou senha incorretos.");
+        if (result.rows[0].status) {
+          // login válido
+          res.status(200).send("Login realizado com sucesso!");
+        } else {
+          // login inválido
+          res.status(401).send("E-mail ou senha incorretos.");
+        }
       }
     }
-  });
+  );
 };
 
-//router.post("/cadastro",
 const cadastro = (req, res) => {
   const email = req.body.email;
   const senha = req.body.senha;
   const nome = req.body.nome;
 
   pgClient.query(
-    createProcedureCadastroUsuario,
+    "CALL usp_CadastroUsuario($1, $2, $3)",
     [email, senha, nome],
     (err, result) => {
       if (err) {
-        res.status(400).send(err);
+        res.status(400).send(err + "ERRO");
       } else {
         res.status(200).send("Cadastro realizado com sucesso!");
       }
@@ -47,13 +44,12 @@ const cadastro = (req, res) => {
   );
 };
 
-//router.post("/addcarrinho",
 const addCarrinho = (req, res) => {
   const codUsuario = req.body.codUsuario;
   const codProduto = req.body.codProduto;
 
   pgClient.query(
-    createProcedureAddCarrinho,
+    "CALL usp_AddCarrinho($1, $2)",
     [codUsuario, codProduto],
     (err, result) => {
       if (err) {
@@ -65,29 +61,27 @@ const addCarrinho = (req, res) => {
   );
 };
 
-//router.get("/selectcarrinho",
 const selectCarrinho = (req, res) => {
   const codUsuario = req.query.codUsuario;
 
-  pgClient.query(createProcedureSelectCarrinho, [codUsuario], (err, result) => {
+  pgClient.query("CALL usp_SELECTCarrinho($1)", [codUsuario], (err, result) => {
     if (err) {
       res.status(400).send(err);
     } else {
-      const carrinho = result.rows.map(item => {
+      const carrinho = result.rows.map((item) => {
         return {
           id: item.car_codigo_in,
           nome: item.car_nome_vc,
           descricao: item.car_descricao_vc,
           caminhoImg: item.car_caminhoimg_vc,
-          valor: item.car_valor_mn
-        }
+          valor: item.car_valor_mn,
+        };
       });
       res.status(200).json({ carrinho });
     }
   });
-};;
+};
 
-//router.post("/addproduto",
 const addProduto = (req, res) => {
   const nome = req.body.nome;
   const descricao = req.body.descricao;
@@ -95,7 +89,7 @@ const addProduto = (req, res) => {
   const valor = req.body.valor;
 
   pgClient.query(
-    createProcedureAddProduto,
+    "CALL usp_AddProduto($1, $2, $3, $4)",
     [nome, descricao, caminhoImg, valor],
     (err, result) => {
       if (err) {
