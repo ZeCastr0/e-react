@@ -8,17 +8,15 @@ const login = (req, res) => {
   const senha = req.body.senha;
 
   pgClient.query(
-    "CALL usp_SelectLoginUsuario($1, $2)",
+    "SELECT usp_SelectLoginUsuario($1, $2)",
     [email, senha],
     (err, result) => {
       if (err) {
         res.status(400).send(err);
       } else {
-        if (result.rows[0].status) {
-          // login válido
+        if (result.rows[0].usp_selectloginusuario) {
           res.status(200).send("Login realizado com sucesso!");
         } else {
-          // login inválido
           res.status(401).send("E-mail ou senha incorretos.");
         }
       }

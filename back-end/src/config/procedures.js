@@ -1,13 +1,13 @@
 const pgClient = require("./database");
 
 const createProcedureLoginUsuario = `
-CREATE OR REPLACE  PROCEDURE usp_SelectLoginUsuario (p__PAR_Email_VC VARCHAR(1024), p__PAR_Senha_VC VARCHAR(30))
+CREATE OR REPLACE  FUNCTION usp_SelectLoginUsuario (p__PAR_Email_VC VARCHAR(1024), p__PAR_Senha_VC VARCHAR(30))
+RETURNS BOOLEAN
 AS $$
 BEGIN
-    SELECT COUNT(*)  FROM Usuarios_T WHERE usu_Email_VC = p__PAR_Email_VC AND usu_Senha_VC = p__PAR_Senha_VC;
+    RETURN EXISTS (SELECT 1 FROM Usuarios_T WHERE usu_Email_VC = p__PAR_Email_VC AND usu_Senha_VC = p__PAR_Senha_VC);
 END;
 $$ LANGUAGE plpgsql;
-
 
 `;
 const createProcedureCadastroUsuario = `
