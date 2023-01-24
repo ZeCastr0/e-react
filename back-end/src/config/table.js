@@ -42,7 +42,13 @@ const createTables = async () => {
             SELECT * FROM pg_tables WHERE tablename = 'carrinho_t'`);
     if (res.rowCount === 0) {
       await pgClient.query(
-        `CREATE TABLE Carrinho_T ( car_Codigo_IN SERIAL PRIMARY KEY, car_CodUsuario_IN INT NOT NULL, car_CodProduto_IN INT NOT NULL, car_pro_Nome_VC VARCHAR(254) NOT NULL, car_pro_Descricao_VC VARCHAR(1024) NOT NULL, car_pro_CaminhoImg_VC VARCHAR(1024) NOT NULL, car_pro_Preco_DECIMAL DECIMAL(10, 2) NOT NULL );`
+        `CREATE TABLE Carrinho_T ( car_Codigo_IN SERIAL PRIMARY KEY, 
+          car_CodUsuario_IN INT NOT NULL, 
+          car_CodProduto_IN INT NOT NULL, 
+          car_pro_Nome_VC VARCHAR(254) NOT NULL, 
+          car_pro_Descricao_VC VARCHAR(1024) NOT NULL, 
+          car_pro_CaminhoImg_VC VARCHAR(1024) NOT NULL, 
+          car_pro_Preco_DECIMAL DECIMAL(10, 2) NOT NULL );`
       );
       console.log("Tabela Carrinho_T criada com sucesso");
     } else {

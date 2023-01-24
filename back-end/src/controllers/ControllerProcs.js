@@ -45,15 +45,23 @@ const cadastro = (req, res) => {
 const addCarrinho = (req, res) => {
   const codUsuario = req.body.codUsuario;
   const codProduto = req.body.codProduto;
+  let cursor;
 
   pgClient.query(
-    "CALL usp_AddCarrinho($1, $2)",
-    [codUsuario, codProduto],
+    "CALL usp_AddCarrinho($1, $2, $3)",
+    [codUsuario, codProduto, cursor],
     (err, result) => {
       if (err) {
         res.status(400).send(err);
       } else {
-        res.status(200).send("Produto adicionado ao carrinho com sucesso!");
+        cursor = result.rows[0].cur;
+        pgClient.query("FETCH ALL IN cur", (err, result) => {
+          if (err) {
+            res.status(400).send(err);
+          } else {
+            res.status(200).send(result.rows);
+          }
+        });
       }
     }
   );

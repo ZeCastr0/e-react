@@ -7,9 +7,9 @@ app.use(express.json());
 
 require("dotenv-safe").config();
 
-//const { createTables } = require("./config/table");
+const { createTables } = require("./config/table");
 const { createProcedures } = require("./config/procedures");
-//createTables(); Ja foi criada
+//createTables();
 createProcedures();
 
 const userRoutes = require("./routes/Routes"); // importa as rotas do arquivo UserRoutes
