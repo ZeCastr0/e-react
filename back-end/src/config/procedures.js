@@ -41,10 +41,10 @@ DECLARE
   v__CALC_pro_CaminhoImg_VC VARCHAR(1024);
   v__CALC_pro_Preco_DECIMAL DECIMAL(10, 2);
 BEGIN
-  SELECT pro_Nome_VC, pro_Descricao, pro_CaminhoImg_VC, pro_Valor_DECIMAL
-  INTO v__CALC_pro_Nome_VC, v__CALC_pro_Descricao_VC, v__CALC_pro_CaminhoImg_VC, v__CALC_pro_Valor_DECIMAL
+  SELECT pro_Nome_VC, pro_Descricao, pro_CaminhoImg_VC, pro_Preco_DECIMAL
+  INTO v__CALC_pro_Nome_VC, v__CALC_pro_Descricao_VC, v__CALC_pro_CaminhoImg_VC, v__CALC_pro_Preco_DECIMAL
   FROM Produtos_T
-  WHERE v__CALC_CodProduto_IN = v___CodProduto_IN;
+  WHERE pro_Codigo_IN = v__CALC_CodProduto_IN;
   
   INSERT INTO Carrinho_T (
     car_CodUsuario_IN,
@@ -61,10 +61,9 @@ BEGIN
   v__CALC_pro_Nome_VC,
   v__CALC_pro_Descricao_VC,
   v__CALC_pro_CaminhoImg_VC,
-  v__CALC_pro_Valor_DECIMAL
-  );
-  
-  END;
+  v__CALC_pro_Preco_DECIMAL
+  ); 
+END;
 $$ LANGUAGE plpgsql;
 `;
 
