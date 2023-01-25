@@ -45,16 +45,14 @@ BEGIN
   INTO v__CALC_pro_Nome_VC, v__CALC_pro_Descricao_VC, v__CALC_pro_CaminhoImg_VC, v__CALC_pro_Preco_DECIMAL
   FROM Produtos_T
   WHERE pro_Codigo_IN = v__CALC_CodProduto_IN;
-  
   INSERT INTO Carrinho_T (
-    car_CodUsuario_IN,
-    car_CodProduto_IN,
-    car_pro_Nome_VC,
-    car_pro_Descricao_VC,
-    car_pro_CaminhoImg_VC,
-    car_pro_Preco_DECIMAL
-    
-  )
+  	car_CodUsuario_IN, 
+  	car_CodProduto_IN, 
+  	car_pro_Nome_VC, 
+  	car_pro_Descricao_VC, 
+  	car_pro_CaminhoImg_VC, 
+  	pro_valor_decimal
+   )
   VALUES (
   v__CALC_CodUsuario_IN,
   v__CALC_CodProduto_IN,
