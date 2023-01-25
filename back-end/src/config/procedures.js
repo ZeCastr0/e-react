@@ -44,7 +44,7 @@ BEGIN
   SELECT pro_Nome_VC, pro_Descricao, pro_CaminhoImg_VC, pro_Valor_DECIMAL
   INTO v__CALC_pro_Nome_VC, v__CALC_pro_Descricao_VC, v__CALC_pro_CaminhoImg_VC, v__CALC_pro_Valor_DECIMAL
   FROM Produtos_T
-  WHERE pCALCro_Codigo_IN = v___CodProduto_IN;
+  WHERE v__CALC_CodProduto_IN = v___CodProduto_IN;
   
   INSERT INTO Carrinho_T (
     car_CodUsuario_IN,
