@@ -46,18 +46,34 @@ const addCarrinho = async (req, res) => {
   const codUsuario = req.body.codUsuario;
   const codProduto = req.body.codProduto;
 
-  try {
-    const result = await pgClient.query("CALL usp_AddCarrinho2($1, $2)", [
-      codUsuario,
-      codProduto,
-    ]);
-    const cursor = result.rows[0].cur;
-    const fetchResult = await pgClient.query("FETCH ALL IN cur");
-    res.status(200).send(fetchResult.rows);
-  } catch (err) {
-    res.status(400).send(err);
-  }
+  pgClient.query(
+    "CALL usp_AddCarrinho($1, $2)",
+    [codUsuario, codProduto],
+    (err, result) => {
+      if (err) {
+        res.status(400).send(err);
+      } else {
+        res.status(200).send(result.rows);
+      }
+    }
+  );
 };
+
+/*const addCarrinho = (req, res) => {
+  const codUsuario = req.body.codUsuario;
+  const codProduto = req.body.codProduto;
+  pgClient.query(
+    "CALL usp_AddCarrinho($1, $2)",
+    [codUsuario, codProduto],
+    (err, result) => {
+      if (err) {
+        res.status(400).send({ error: "Erro ao adicionar item ao carrinho" });
+      } else {
+        res.status(200).send({ message: "Item adicionado ao carrinho com sucesso" });
+      }
+    }
+  );
+}*/
 
 const selectCarrinho = (req, res) => {
   const codUsuario = req.query.codUsuario;
