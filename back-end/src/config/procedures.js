@@ -28,42 +28,22 @@ $$ LANGUAGE plpgsql;
 `;
 
 const createProcedureAddCarrinho = `
-CREATE OR REPLACE PROCEDURE usp_AddCarrinho (
+CREATE OR REPLACE PROCEDURE usp_AddCarrinho2 (
   p__PAR_CodUsuario_IN INT,
   p__PAR_CodProduto_IN INT
-)
-AS $$
-DECLARE 
-  v__CALC_CodUsuario_IN INT = p__PAR_CodUsuario_IN;
-  v__CALC_CodProduto_IN INT = p__PAR_CodProduto_IN;
-  v__CALC_pro_Nome_VC VARCHAR(254);
-  v__CALC_pro_Descricao_VC VARCHAR(1024);
-  v__CALC_pro_CaminhoImg_VC VARCHAR(1024);
-  v__CALC_pro_Preco_DECIMAL DECIMAL(10, 2);
-BEGIN
-  SELECT pro_Nome_VC, pro_Descricao, pro_CaminhoImg_VC, pro_Valor_DECIMAL
-  INTO v__CALC_pro_Nome_VC, v__CALC_pro_Descricao_VC, v__CALC_pro_CaminhoImg_VC, v__CALC_pro_Valor_DECIMAL
-  FROM Produtos_T
-  WHERE pCALCro_Codigo_IN = v___CodProduto_IN;
-  
-  INSERT INTO Carrinho_T (
-    car_CodUsuario_IN,
-    car_CodProduto_IN,
-    car_pro_Nome_VC,
-    car_pro_Descricao_VC,
-    car_pro_CaminhoImg_VC,
-    car_pro_Preco_DECIMAL
-    
   )
-  VALUES (
-  v__CALC_CodUsuario_IN,
-  v__CALC_CodProduto_IN,
-  v__CALC_pro_Nome_VC,
-  v__CALC_pro_Descricao_VC,
-  v__CALC_pro_CaminhoImg_VC,
-  v__CALC_pro_Valor_DECIMAL
-  );
-  
+  AS $$
+  BEGIN
+  INSERT INTO Carrinho_T (car_CodUsuario_IN, 
+    car_CodProduto_IN, 
+    car_pro_Nome_VC, 
+    car_pro_Descricao_VC, 
+    car_pro_CaminhoImg_VC, 
+    pro_Valor_DECIMAL)
+    
+  SELECT p__PAR_CodUsuario_IN, p__PAR_CodProduto_IN, pro_Nome_VC, pro_Descricao_VC, pro_CaminhoImg_VC, pro_Valor_DECIMAL
+  FROM Produtos_T
+  WHERE pro_Codigo_IN = p__PAR_CodProduto_IN;
   END;
 $$ LANGUAGE plpgsql;
 `;
